@@ -1,0 +1,38 @@
+.smallCellPicture{
+    width:15px;
+    height:15px;
+    margin-left:1.5px;
+    margin-right: 1.5px;
+}
+
+body{
+    margin-top: 1%;
+    margin-left: 20%;
+    margin-right:20%;
+    background-color: rgb(237, 240, 248);
+}
+
+#main{
+    font-size: 85%;
+    padding-left:10%;
+    padding-right:10%;
+    padding-top: 1%;
+    padding-bottom: 5%;
+    color: rgb(48, 86, 134);
+    font-family: Verdana, Geneva, sans-serif;
+    align-content: center;
+    background-color: rgba(215, 222, 250, 0.25);
+}
+
+button{
+    color: rgb(72, 112, 163);
+}
+
+select, button{
+    margin:1%;
+}
+
+option{
+    color: rgb(72, 112, 163);
+    margin:1%;
+}

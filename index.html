@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>6.170 Assignment 2: Game of Life</title>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="./functionalsUtil.js" charset="utf-8"></script>
+    <script src="./Board.js" charset="utf-8"></script>
+    <script src="./presets.js" charset="utf-8"></script>
+    <script src="./boardViewController.js" charset="utf-8"></script>
+    <script src="./controller.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="./styles.css" type="text/css" charset="utf-8">
+</head>
+
+<body>
+    <div id="main">
+    <h1>Tiange Zhan's Game of Life</h1>
+    <p id="instructions">Choose a preset initial state, or click around in the cells to set your own. Press
+    start when you're ready to see things go, or press Step to just go one step in time.</p>
+    <label for="boardSize">Board Size</label>
+    <select id="boardSizeDropdown" name="boardSize">
+        <option value="10">10</option>
+        <option selected="true" value="15">15</option>
+        <option value="20">20</option>
+        <option value="25">25</option>
+        <option value="30">30</option>
+
+    </select>
+    <label for="preset">Initial State</label>
+    <select id="presetDropdown" name="preset">
+        <option value="clear">Clear</option>
+        <option selected="true" value="preset1">Preset 1</option>
+        <option value="preset2">Preset 2</option>
+        <option value="preset3">Preset 3</option>
+        <option value="preset4">Preset 4</option>
+    </select>
+    <button id="startStopButton">Start</button>
+    <button id="nextButton" type="button">Next</button>
+    <br>
+    <br>
+    <div id="cellsPictures"></div>
+    <script>
+        var board = Board(15);
+        board.setCellsTrue(presets["preset1"]);
+        controller = initController(board);
+        viewInstall($('#cellsPictures'), board);
+    </script>
+    </div>
+</body>
+</html>
